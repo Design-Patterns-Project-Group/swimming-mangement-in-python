@@ -1,6 +1,6 @@
 class Season:
     def __init__(self, name, start):
-        self._name = name
+        self._name = name # Assumption: name is unique. eg. LeagueName_Summer_2018
         self._start = start
     
     def getName(self):
