@@ -1,1 +1,2 @@
 from .age_group_service import AgeGroupService
+from .swimmer_service import SwimmerService
