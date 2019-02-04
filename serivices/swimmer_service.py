@@ -7,33 +7,39 @@ class SwimmerService:
         # assume this is a database
         self._data_store = [
             {
-                'id': 1,
+                'swimmer_id': 1,
                 'first_name' : 'Abebe',
                 'last_name' : 'Bekila'
             },
             {
-                'id': 2,
+                'swimmer_id': 2,
                 'first_name' : 'Abebe2',
                 'last_name' : 'Bekila2'
             },
             {
-                'id': 3,
+                'swimmer_id': 3,
                 'first_name' : 'Abebe3',
                 'last_name' : 'Bekila3'
             },
             {
-                'id': 4,
+                'swimmer_id': 4,
                 'first_name' : 'Abebe4',
                 'last_name' : 'Bekila4'
             },
             {
-                'id': 5,
+                'swimmer_id': 5,
                 'first_name' : 'Abebe5',
                 'last_name' : 'Bekila5'
             }
         ]
 
     def getById(self, swimmer_id):
-        raise NotImplemented()
-    
-    
+        data_entry = filter(lambda entry: entry['swimmer_id'] == swimmer_id, self._data_store)
+        
+        try:
+            data_entry = data_entry[0]
+            if not data_entry: raise
+        except:
+            raise Exception('could not find a swimmer by that id')
+
+        return Swimmer(**data_entry)    
