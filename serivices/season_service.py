@@ -32,3 +32,6 @@ class SeasonService:
             raise Exception('could not find a season by that name')
 
         return Season(**data_entry)
+
+    def getAll(self):
+        return map(lambda entry: Season(**entry), self._data_store)
