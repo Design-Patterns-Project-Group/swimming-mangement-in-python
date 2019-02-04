@@ -42,3 +42,15 @@ class ScoreService:
             }
         ]
 
+    def getAllBySeason(season):
+        raise NotImplemented()
+
+    def getAllBySeasonName(season_name):
+        raise NotImplemented()
+
+    def getAllBySeasonWithAgeGroup(age_group, season):
+        raise NotImplemented()
+
+    def getAllBySeasonWithAgeGroupNames(age_group_name, season_name):
+        raise NotImplemented()
+    
