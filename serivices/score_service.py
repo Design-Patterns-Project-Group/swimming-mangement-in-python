@@ -31,7 +31,7 @@ class ScoreService:
                 'distance': 3,
                 'strokes': 2,
                 'time_taken': 6,
-                'age_group': 'teenager',
+                'age_group': 'toddler',
                 'season': 'ethiopia_season1_2018'
             },
             {
@@ -40,10 +40,11 @@ class ScoreService:
                 'strokes': 3,
                 'time_taken': 2,
                 'age_group': 'teenager',
-                'season': 'ethiopia_season1_2018'
+                'season': 'ethiopia_season2_2018'
             }
         ]
 
+    # TODO: Try to integrate a strategy design pattern in here for the fetching algorithm
     def getAllBySeason(season):
         data_entry = filter(lambda entry: entry['season'] == season.getName(), self._data_store)
         
