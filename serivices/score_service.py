@@ -81,5 +81,12 @@ class ScoreService:
 
 
     def getAllBySeasonWithAgeGroupNames(age_group_name, season_name):
-        raise NotImplemented()
-    
+        data_entry = filter(lambda entry: entry['season'] == season_name and entry['age_group'] == age_group_name, self._data_store)
+        
+        for entry in data_entry:
+            entry['swimmer'] = SwimmerService().getById(entry['swimmer_id'])
+            del entry['swimmer_id']
+            entry['age_group'] = AgeGroupService().getByName(entry['age_group'])
+            entry['season'] = SeasonService().getByName(entry['season'])
+        
+        return map(lambda entry: Score(**entry), data_entry)    
