@@ -8,28 +8,32 @@ class SwimmerService:
         self._data_store = [
             {
                 'id': 1,
-                '' : 13,
-                'max_age' : 18
+                'first_name' : 'Abebe',
+                'last_name' : 'Bekila'
             },
             {
-                'name': 'toddler',
-                'min_age' : 1,
-                'max_age' : 5
+                'id': 2,
+                'first_name' : 'Abebe2',
+                'last_name' : 'Bekila2'
             },
             {
-                'name': 'youth',
-                'min_age' : 18,
-                'max_age' : 25
+                'id': 3,
+                'first_name' : 'Abebe3',
+                'last_name' : 'Bekila3'
+            },
+            {
+                'id': 4,
+                'first_name' : 'Abebe4',
+                'last_name' : 'Bekila4'
+            },
+            {
+                'id': 5,
+                'first_name' : 'Abebe5',
+                'last_name' : 'Bekila5'
             }
         ]
 
-    def getByName(self, group_name):
-        data_entry = filter(lambda entry: entry['name'] == group_name, self._data_store)
-        
-        try:
-            data_entry = data_entry[0]
-            if not data_entry: raise
-        except:
-            raise Exception('could not find an age group by that name')
-
-        return AgeGroup(**data_entry)
+    def getById(self, swimmer_id):
+        raise NotImplemented()
+    
+    
