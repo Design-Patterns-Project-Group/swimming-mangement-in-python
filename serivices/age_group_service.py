@@ -1,8 +1,12 @@
-import sys, os.path; sys.path.append(os.path.abspath('..'))
+import sys, os.path
+
+sys.path.append(os.path.abspath('..'))
 
 from models import *
 
-class AgeGroupService:
+from .abstract_age_group import AbstractAgeGroupService
+
+class AgeGroupService(AbstractAgeGroupService):
     def __init__(self):
         # assume this is a database
         self._data_store = [
@@ -24,11 +28,11 @@ class AgeGroupService:
         ]
 
     def getByName(self, group_name):
-        data_entry = filter(lambda entry: entry['name'] == group_name, self._data_store)
+        data_entry = list(filter(lambda entry: entry['name'] == group_name, self._data_store))
         
         try:
-            data_entry = data_entry[0]
-            if not data_entry: raise
+            data_entry = list(data_entry)[0]
+
         except:
             raise Exception('could not find an age group by that name')
 

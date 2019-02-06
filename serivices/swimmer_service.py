@@ -1,8 +1,12 @@
-import sys, os.path; sys.path.append(os.path.abspath('..'))
+import sys, os.path
+
+sys.path.append(os.path.abspath('..'))
 
 from models import *
 
-class SwimmerService:
+from .abstract_swimmer_service import AbstractSwimmerService
+
+class SwimmerService(AbstractSwimmerService):
     def __init__(self):
         # assume this is a database
         self._data_store = [
@@ -34,11 +38,11 @@ class SwimmerService:
         ]
 
     def getById(self, swimmer_id):
-        data_entry = filter(lambda entry: entry['swimmer_id'] == swimmer_id, self._data_store)
+        data_entry = list(filter(lambda entry: entry['swimmer_id'] == swimmer_id, self._data_store))
         
         try:
             data_entry = data_entry[0]
-            if not data_entry: raise
+            
         except:
             raise Exception('could not find a swimmer by that id')
 
