@@ -1,8 +1,10 @@
-import sys, os.path; sys.path.append(os.path.abspath('..'))
+import sys, os.path
+
+sys.path.append(os.path.abspath('..'))
 
 from models import *
 
-from . import *
+from . import SwimmerService, SeasonService, AgeGroupService, AbstractScoreService
 
 '''
 Fields:
@@ -14,7 +16,7 @@ Fields:
     season    
 '''
 
-class ScoreService:
+class ScoreService(AbstractScoreService):
     def __init__(self):
         # assume this is a database
         self._data_store = [
@@ -45,8 +47,8 @@ class ScoreService:
         ]
 
     # TODO: Try to integrate a strategy design pattern in here for the fetching algorithm
-    def getAllBySeason(season):
-        data_entry = filter(lambda entry: entry['season'] == season.getName(), self._data_store)
+    def getAllBySeason(self, season):
+        data_entry = list(filter(lambda entry: entry['season'] == season.getName(), self._data_store))
         
         for entry in data_entry:
             entry['swimmer'] = SwimmerService().getById(entry['swimmer_id'])
@@ -58,7 +60,7 @@ class ScoreService:
 
 
     def getAllBySeasonName(self, season_name):
-        data_entry = filter(lambda entry: entry['season'] == season_name, self._data_store)
+        data_entry = list(filter(lambda entry: entry['season'] == season_name, self._data_store))
         
         for entry in data_entry:
             entry['swimmer'] = SwimmerService().getById(entry['swimmer_id'])
@@ -69,8 +71,8 @@ class ScoreService:
         return map(lambda entry: Score(**entry), data_entry)
             
 
-    def getAllBySeasonWithAgeGroup(age_group, season):
-        data_entry = filter(lambda entry: entry['season'] == season.getName() and entry['age_group'] == age_group.getName(), self._data_store)
+    def getAllBySeasonWithAgeGroup(self, age_group, season):
+        data_entry = list(filter(lambda entry: entry['season'] == season.getName() and entry['age_group'] == age_group.getName(), self._data_store))
         
         for entry in data_entry:
             entry['swimmer'] = SwimmerService().getById(entry['swimmer_id'])
@@ -81,8 +83,8 @@ class ScoreService:
         return map(lambda entry: Score(**entry), data_entry)
 
 
-    def getAllBySeasonWithAgeGroupNames(age_group_name, season_name):
-        data_entry = filter(lambda entry: entry['season'] == season_name and entry['age_group'] == age_group_name, self._data_store)
+    def getAllBySeasonWithAgeGroupNames(self, age_group_name, season_name):
+        data_entry = list(filter(lambda entry: entry['season'] == season_name and entry['age_group'] == age_group_name, self._data_store))
         
         for entry in data_entry:
             entry['swimmer'] = SwimmerService().getById(entry['swimmer_id'])

@@ -1,14 +1,17 @@
-import sys, os.path; sys.path.append(os.path.abspath('..'))
+import sys, os.path
+
+sys.path.append(os.path.abspath('..'))
 
 from models import *
 
+from . import AbstractSeasonService
 '''
  self._name = name # Assumption: name is unique. eg. LeagueName_Summer_2018
         self._start = start
     
 '''
 
-class SeasonService:
+class SeasonService(AbstractSeasonService):
     def __init__(self):
         # assume this is a database
         self._data_store = [
@@ -23,11 +26,11 @@ class SeasonService:
         ]
 
     def getByName(self, season_name):
-        data_entry = filter(lambda entry: entry['name'] == season_name, self._data_store)
+        data_entry = list(filter(lambda entry: entry['name'] == season_name, self._data_store))
         
         try:
             data_entry = data_entry[0]
-            if not data_entry: raise
+            
         except:
             raise Exception('could not find a season by that name')
 

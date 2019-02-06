@@ -1,3 +1,11 @@
+# Abstract classes for the services (for interface reference)
+from .abstract_age_group import AbstractAgeGroupService
+from .abstract_score_service import AbstractScoreService
+from .abstract_season_service import AbstractSeasonService
+from .abstract_swimmer_service import AbstractSwimmerService
+
+# mock services (In-Memory datasource)
+# NOTE: implement your own datasource mapper later 
 from .age_group_service import AgeGroupService
 from .swimmer_service import SwimmerService
 from .season_service import SeasonService
