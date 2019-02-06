@@ -32,13 +32,20 @@ install python3 first (if not installed)
 ```
 And you should be okay to use the system :)
 
+### On other platforms
+It is possible to use app as long as you have a working python3 environment and a tkinter support. <br/>
+please refer to [this page](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python) for a guide on how to setup the environment.
+
 ## Proposed Answer
 ### Structure
 ```
 project
 │
 │   README.md
-└─── models/  << contains abstraction(python objects) of the entities and actors involved on the system >>
+└─── models/     -  contains abstractionof the entities/actors involved in the system
+│
+└─── services/   -  contains logic that populates the models (think of them as Repositories for the models)
+...
 ```
 
 > **Note:** for more detailed explanation/documentation goto each module's page 
