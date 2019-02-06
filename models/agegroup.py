@@ -14,5 +14,5 @@ class AgeGroup:
         return self._max_age
 
     def verifySwimmer(self, swimmer):
-        raise NotImplemented('yet :)')
+        raise NotImplementedError('yet :)')
     
