@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from models import *
-from serivices import *
+from services import *
 
 def main():
     # season1 = Season('2018 summer', '1/1/2018')
