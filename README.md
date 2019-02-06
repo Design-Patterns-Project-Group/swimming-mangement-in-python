@@ -4,14 +4,14 @@
 This is the first question of the design pattern's project
 
 ---
-## Question (unedited)
+## Question (Original)
 > **Q1)** Consider a database of a large number of swimmers in a league or statewide
 organization. Each swimmer swims several strokes and distances throughout a season. The
 best times for swimmers are tabulated by age group. Within a single four-month season,
 many swimmers will have birthdays and therefore move into new age groups.<br/>
-    **1.1.** Write a program which displays list of swimmers who did best in their age groups
+**1.1.** Write a program which displays list of swimmers who did best in their age groups
 in a given season<br/>
-    **1.2.** sort it by sex, allow your program to be flexible enough to also be sorted by time
+**1.2.** sort it by sex, allow your program to be flexible enough to also be sorted by time
 or by actual age rather than by age group without destroy the original data order.
 (Display the original list at all times,probably on the right side of your contain)
 ---
@@ -26,7 +26,6 @@ install python3 first (if not installed)
 ```
 
 next install `tkinter` for GUI
-install python3 first (if not installed)
 ```bash
 [root@linux ~]$ sudo yum install python3-tkinter
 ```
@@ -45,6 +44,7 @@ project
 └─── models/     -  contains abstractionof the entities/actors involved in the system
 │
 └─── services/   -  contains logic that populates the models (think of them as Repositories for the models)
+
 ...
 ```
 
