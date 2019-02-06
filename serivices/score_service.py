@@ -4,9 +4,7 @@ sys.path.append(os.path.abspath('..'))
 
 from models import *
 
-from . import SwimmerService, SeasonService, AgeGroupService
-
-from .abstract_score_service import AbstractScoreService
+from . import SwimmerService, SeasonService, AgeGroupService, AbstractScoreService
 
 '''
 Fields:

@@ -4,7 +4,7 @@ sys.path.append(os.path.abspath('..'))
 
 from models import *
 
-from .abstract_swimmer_service import AbstractSwimmerService
+from . import AbstractSwimmerService
 
 class SwimmerService(AbstractSwimmerService):
     def __init__(self):

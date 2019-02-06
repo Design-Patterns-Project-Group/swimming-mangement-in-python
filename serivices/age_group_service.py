@@ -4,7 +4,7 @@ sys.path.append(os.path.abspath('..'))
 
 from models import *
 
-from .abstract_age_group import AbstractAgeGroupService
+from . import AbstractAgeGroupService
 
 class AgeGroupService(AbstractAgeGroupService):
     def __init__(self):

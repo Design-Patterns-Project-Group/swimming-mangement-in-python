@@ -4,7 +4,7 @@ sys.path.append(os.path.abspath('..'))
 
 from models import *
 
-from .abstract_season_service import AbstractSeasonService
+from . import AbstractSeasonService
 '''
  self._name = name # Assumption: name is unique. eg. LeagueName_Summer_2018
         self._start = start
