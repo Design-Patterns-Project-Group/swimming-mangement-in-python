@@ -15,21 +15,12 @@ in a given season<br/>
 or by actual age rather than by age group without destroy the original data order.
 (Display the original list at all times,probably on the right side of your contain)
 ---
-<<<<<<< HEAD
 ## System Requirements (Setup Guide):
 A **Python 3.X.X environment** is along with `python3-tkinter` module is required to run a working demo of the app with a support for a cross-platform graphical user-interface(tkinter).
 ### On Windows:
 By default, a python3 installtion should install `tkinter` on your platform - and you should be good to go without any additional setup. 
 ### On Fedora (or similiar Linux Distributions that uses `yum` package manager):
 install **Python 3.X.X**(the latest version) first (if not installed)
-=======
-## System Requirements:
-A Python 3.x.x environment is along with `python3-tkinter` module is required to run a working demo of the app with a support for a cross-platform graphical user-interface(tkinter).
-### On Windows:
-By default, a python3 installtion should install `tkinter` on your platform - and you should be good to go without any additional setiup. 
-### On Fedora (or similiar Linux Distributions that uses `yum` package manager):
-install Python 3.x.x(the latest version) first (if not installed)
->>>>>>> c5dac2ab30fb475c02a083a5a37f628e594e6330
 ```bash
 [root@linux ~]$ sudo yum install python3
 ```
@@ -43,7 +34,6 @@ And assuming everything worked without a flaw, you should be able to use the sys
 ### On other platforms
 It is possible to use the app as long as you have a working python3 (with tkinter) environment. <br/>
 If these requirements are not fulfilled, please refer to [this page](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python) for a guide on how to setup the environment.
-<<<<<<< HEAD
 
 ## How to run the demo:
 ### Step 1: `Clone` the project
@@ -85,8 +75,6 @@ Other methods to run include:
 * IDLE
 * Online Web Services
 * etc...
-=======
->>>>>>> c5dac2ab30fb475c02a083a5a37f628e594e6330
 
 ## How to run the demo:
 ### Step 1: `Clone` the project
@@ -127,19 +115,11 @@ project
 │
 └─── main.py
 │
-<<<<<<< HEAD
 └─── [ models/   ]   -  contains abstractions of the entities/actors involved
 │
 └─── [ services/ ]   -  contains logic(like repo) that populates the models
 │
 └─── [ views/    ]   -  All the user interface stuff (GUI implementation)
-=======
-└─── [ models/     -  contains abstractions of the entities/actors involved ]
-│
-└─── [ services/   -  contains logic(like repo) that populates the models ]
-│
-└─── [ views/      -  All the user interface stuff (GUI implementation) ]
->>>>>>> c5dac2ab30fb475c02a083a5a37f628e594e6330
  
 ...
 ```
