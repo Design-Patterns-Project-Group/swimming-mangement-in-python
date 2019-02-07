@@ -44,7 +44,9 @@ project
 └─── models/     -  contains abstractionof the entities/actors involved in the system
 │
 └─── services/   -  contains logic that populates the models (think of them as Repositories for the models)
-
+│
+└─── views/   -  All the user interface stuff (GUI implementation)
+ 
 ...
 ```
 
