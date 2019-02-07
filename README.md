@@ -15,12 +15,21 @@ in a given season<br/>
 or by actual age rather than by age group without destroy the original data order.
 (Display the original list at all times,probably on the right side of your contain)
 ---
+<<<<<<< HEAD
 ## System Requirements (Setup Guide):
 A **Python 3.X.X environment** is along with `python3-tkinter` module is required to run a working demo of the app with a support for a cross-platform graphical user-interface(tkinter).
 ### On Windows:
 By default, a python3 installtion should install `tkinter` on your platform - and you should be good to go without any additional setup. 
 ### On Fedora (or similiar Linux Distributions that uses `yum` package manager):
 install **Python 3.X.X**(the latest version) first (if not installed)
+=======
+## System Requirements:
+A Python 3.x.x environment is along with `python3-tkinter` module is required to run a working demo of the app with a support for a cross-platform graphical user-interface(tkinter).
+### On Windows:
+By default, a python3 installtion should install `tkinter` on your platform - and you should be good to go without any additional setiup. 
+### On Fedora (or similiar Linux Distributions that uses `yum` package manager):
+install Python 3.x.x(the latest version) first (if not installed)
+>>>>>>> c5dac2ab30fb475c02a083a5a37f628e594e6330
 ```bash
 [root@linux ~]$ sudo yum install python3
 ```
@@ -34,6 +43,7 @@ And assuming everything worked without a flaw, you should be able to use the sys
 ### On other platforms
 It is possible to use the app as long as you have a working python3 (with tkinter) environment. <br/>
 If these requirements are not fulfilled, please refer to [this page](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python) for a guide on how to setup the environment.
+<<<<<<< HEAD
 
 ## How to run the demo:
 ### Step 1: `Clone` the project
@@ -75,7 +85,40 @@ Other methods to run include:
 * IDLE
 * Online Web Services
 * etc...
+=======
+>>>>>>> c5dac2ab30fb475c02a083a5a37f628e594e6330
 
+## How to run the demo:
+### Step 1: `Clone` the project
+You can manually install the zip file or do this from terminal using the Git utility
+```bash
+[root@linux ~]$ sudo git clone https://github.com/Design-Patterns-Project-Group/swimming-mangement-in-python.git
+```
+
+### Step 2: `cd` into the newly created directory
+use cd/chdir from terminal or open the folder from GUI (Nautilus or Windows Explorer)
+```bash
+[root@linux ~]$ cd swimming-mangement-in-python/
+```
+
+### Step 3: Launch the program
+You can do this multiple ways.
+The easy and most straight-forward way would be to ue python3 command from terminal
+> Note: You must add python3 to your $PATH or environment variable to access python3
+```bash
+[root@linux swimming-mangement-in-python/]$ python3 main.py
+```
+
+alternatively, you can `chmod` it to be executable and run (the shebang directive is set to `/usr/bin/python3`)
+```bash
+[root@linux swimming-mangement-in-python/]$ sudo chmod +x main.py
+[root@linux swimming-mangement-in-python/]$ ./main.py
+```
+
+Or just double click on the file you dont prefer to work with terminal.
+> Note: You must associate the `.py` and other python related file extensions to the python3 interpretor first for this method to work.
+
+Other methods to run include: using IDEs, IDLE, etc...
 ## Proposed Answer
 ### Structure
 ```
@@ -84,11 +127,19 @@ project
 │
 └─── main.py
 │
+<<<<<<< HEAD
 └─── [ models/   ]   -  contains abstractions of the entities/actors involved
 │
 └─── [ services/ ]   -  contains logic(like repo) that populates the models
 │
 └─── [ views/    ]   -  All the user interface stuff (GUI implementation)
+=======
+└─── [ models/     -  contains abstractions of the entities/actors involved ]
+│
+└─── [ services/   -  contains logic(like repo) that populates the models ]
+│
+└─── [ views/      -  All the user interface stuff (GUI implementation) ]
+>>>>>>> c5dac2ab30fb475c02a083a5a37f628e594e6330
  
 ...
 ```
