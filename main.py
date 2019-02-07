@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-from models import *
 import services
-from views.main_view import MainView
-
-def main():
-    MainView(services)
+from views import MainView
 
 if __name__ == '__main__':
-    main()
+    MainView(services)
+    
